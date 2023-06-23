@@ -1,0 +1,58 @@
+1.)Difference between http1 and http2
+
+http1:
+It transfer all the requests & responses in the plain text message form.
+The head of line blocking in which TCP connection is blocked all other requests until the response does not receive.
+All the information related to the header file is repeated in every request.
+It uses requests resource Inlining for use getting multiple pages.
+
+In this process, a client sends a text-based request to a server by calling a method like GET or POST.
+In response, the server sends a resource like an HTML page back to the client.
+
+For example, let’s say you are visiting a website at the domain www.example.com.
+When you navigate to this URL, the web browser on your computer sends an HTTP request in the form of a text-based message,
+similar to the one shown here:
+
+GET /index.html HTTP/1.1
+Host: www.example.com
+
+http2:
+HTTP/2 is the binary framing layer, which can be thought of as a part of the application layer in the internet protocol stack.
+HTTP/2 uses the binary framing layer to encapsulate all messages in binary format, while still maintaining HTTP semantics,
+such as verbs, methods, and headers. An application level API would still create messages in the conventional HTTP formats,
+but the underlying layer would then convert these messages into binary. 
+This ensures that web applications created before HTTP/2 can continue functioning as normal when interacting with the new protocol
+
+In HTTP/2, the binary framing layer encodes requests/responses and cuts them up into smaller packets of information,
+greatly increasing the flexibility of data transfer.
+
+Since HTTP/2 enables multiple concurrent responses to a client’s initial GET request, a server can send a resource to a client along 
+with the requested HTML page, providing the resource before the client asks for it.
+This process is called server push. In this way, an HTTP/2 connection can accomplish
+the same goal of resource inlining while maintaining the separation between the pushed resource and the document.
+This means that the client can decide to cache or decline the pushed resource separate from the main HTML document,
+fixing the major drawback of resource inlining.
+
+
+2.) Objects and its internal representation in Javascript:
+
+
+Object is just a Key and value that organized in form.
+A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached
+to the object. Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects.
+The properties of an object define the characteristics of the object. 
+To access the properties of an object with a simple dot-notation:
+
+objectName.propertyName
+Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case sensitive.
+To define a property by assigning it a value. For example, let’s create an object named myCar and give it properties
+named make, model, and year as follows:
+
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+To call:
+console.log(mycar.model);
+It gives an Mustang.
