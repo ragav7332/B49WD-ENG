@@ -1,0 +1,168 @@
+1.)Do the below programs in anonymous function & IIFE
+
+a) Print odd numbers in an array
+let odd=function(arr){
+    for(let i=0;i<arr.length;i++){
+       if(arr[i]%2!==0){
+         return arr[i];      
+}
+
+}
+var arr = [1,2,3,4,5,6,7,8,9,10];
+console.log(odd(arr));
+
+b)Convert all the strings to title caps in a string array
+
+let cap = function(str){
+    for(let i=0;i<str.length;i++){
+     str[i] = str[i].charAt(0).toUpperCase();
+}return str.join(' ');
+}
+var str = ["how","are","you"];
+console.log(cap(str));
+
+c)Sum of all numbers in an array
+
+let sum = function(arr){
+   for(let i=0;i<arr.length;i++){
+    count = count + arr[i];
+}if(count>num){
+return count;
+}
+}
+var num = arr[0];
+var arr = [2,3,4,5,6,7,8];
+console.log(sum(arr));
+
+d)Return all the prime numbers in an array
+
+let prime = function(arr){
+   numArray = numArray.filter((number(=>{
+     for(let i=2;i<=Math.sqrt(number);i++){
+if(number % i ===0)return false;
+}
+return true;
+
+});
+}
+var arr=[2,3,4,5,6,7,8,9,10];
+console.log(prime(arr));
+
+e)Return all the palindromes in an array
+
+let palin = function(arr,rev){
+   for(let i=0;i<arr.length;i++){
+      for(let j=0;j<rev.length;j++){
+          if(arr[i] == rev[j]){
+             word.push(arr[i]);
+}
+      }
+   }
+return word;
+}
+var arr=["racecar","pineapple","pineenip","porcupine","malayalam"];
+let word = [];
+let str = arr.slice(0);
+let rev = str.toString(),split("").reverse().join("");
+console.log(palin(arr,rev));
+
+g.)Remove duplicates from an array
+
+let duplicate = function(arr){
+  for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length;j++){
+       if(arr[i] == arr[j]){
+          word.push(arr[i]);
+}
+}
+}
+return word;
+
+}
+var word=[];
+var arr=[1,2,3,1,6,7,6,2,8,0,9];
+console.log(duplicate(arr));
+
+h.)Rotate an array by k times
+let rotatearr = function(arr,k){
+var n = arr.length;
+k=k%n;
+  for(let i=0;i<n;i++){
+    if(i<k){
+  console.log(arr[n+i-k]);
+}else{
+  console.log(arr[i-k]);
+}
+}
+}
+var k = 2;
+var arr=[1,2,3,4,5];
+rotatearr(arr);
+
+2.)Do the below programs in arrow functions.
+
+a.)Print odd numbers in an array
+
+const odd = (arr)=>{
+     for(let i=0;i<arr.length;i++){
+       if(arr[i]%2!==0){
+         console arr[i];      
+}
+}
+var arr = [1,2,3,4,5,6,7,8,9,10];
+odd(arr);
+
+b.)Convert all the strings to title caps in a string array
+
+const cap = (str)=>{
+   for(let i=0;i<str.length;i++){
+     str[i] = str[i].charAt(0).toUpperCase();
+}console.log(str.join(' '));
+}
+var str = ["how","are","you"];
+cap(str);
+
+c.)Sum of all numbers in an array
+
+const sum=(arr)=>{
+    for(let i=0;i<arr.length;i++){
+    count = count + arr[i];
+}if(count>num){
+console.log(count);
+}
+}
+var num = arr[0];
+var arr = [2,3,4,5,6,7,8];
+sum(arr);
+
+d.)Return all the prime numbers in an array
+
+const prime=(arr)=>{
+   numArray = numArray.filter((number(=>{
+     for(let i=2;i<=Math.sqrt(number);i++){
+if(number % i ===0)return false;
+}
+return true;
+}
+var arr=[2,3,4,5,6,7,8,9,10];
+console.log(prime(arr));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
