@@ -1,0 +1,96 @@
+3.)Write a “person” class to hold all the details.
+
+class person{
+    constructor(name,secid,place,phone){
+        this.name = name;
+        this.secid = secid;
+        this.place = place;
+        this.phone = phone;
+    }
+}
+const detail = new person("Raja",1784567297,"theini",789802345);
+console.log(detail);
+
+
+4.) write a class to calculate the uber price.
+class Uber {
+    static BaseFare = 20;
+    static CostPerMile = 6;
+    static CostPerMinute = 4;
+    static BookingFee = 10;
+    constructor(time=1,mile=1){
+        this.time=time;
+        this.mile=mile;
+    }
+    totalPrice(time , mile){
+        console.log(`the total price is ${(Uber.BaseFare)+(Uber.BookingFee)+((Uber.CostPerMinute)*time)+((Uber.CostPerMile)*mile)} only`);
+    }
+}
+let bike = new Uber();
+bike.totalPrice(15,10); //150
+bike.totalPrice(10,10); //130
+
+1.) https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+class movie{
+    constructor(title,studio,rating="PG"){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+    Studio(){
+        return `The movie title is "${this.title}" and studio is "${this.studio}"`;
+    }
+    Rating(rating = "PG"){
+        return `The movie title is "${this.title}"-"${this.rating}"`;
+        
+    }
+}
+const film = new movie("Casino Royale","Eon Productions","PG13");
+console.log(film.Studio());
+console.log(film.Rating());
+
+2.) https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+class Circle{
+    constructor(radius,color){
+        this.radius = radius;
+        this.color = color;
+    }
+    circle(){
+        return `The radius of circle is ${this.radius} and color is ${this.color}`;
+    }
+    circle(radius = this.radius){
+       this.radius = radius++;
+       return `The radius goin to large of ${this.radius}`;
+    }
+    circle(radius,color="Blue"){
+        this.radius = radius;
+        this.color = color;
+        return `The radius of circle is ${this.radius} and color is ${this.color}`;
+    }
+    setRadius(radius = 4.0){
+        this.radius = radius;
+    }
+    getRadius(){
+        return `The new radius is ${this.radius}`;
+    }
+    getArea(){
+        return `The area of circle is ${(this.radius)*(this.radius)*4}`;
+    }
+    getCircumference(){
+        return `the circumference is ${(this.radius)*2*(Math.PI)}`;
+    }
+}   
+const round = new Circle(1,"red");
+console.log(round);
+console.log(round.circle());
+console.log(round.circle(2));
+console.log(round.circle(3,"green"));
+console.log(round.getRadius());
+console.log(round.getArea());
+console.log(round.getCircumference());
+
+
+
+
