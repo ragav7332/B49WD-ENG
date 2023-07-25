@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // import fetch from "node-fetch"
+
+        fetch("https://www.themealdb.com/api.php")
+        .then((response)=>{
+            response.json();
+        })
+        .then((data)=>{
+            console.log(data);
+           var d= document.createElement("h4");
+            d.setAttribute("class","container");
+            document.getElementsByClassName("container").innerHTML = data;
+        })
+    </script>
+</body>
+</html>
